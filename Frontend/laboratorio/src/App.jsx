@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Protected from "./components/Protected";
 import Customers from "./components/Customers";
 import SalesForm from "./components/SalesForm";
+import SalesList from "./components/SalesList";
 import "./App.css";
 
 const NavLink = ({ to, children }) => {
@@ -31,6 +32,7 @@ const App = () => (
         <NavLink to="/protected">Protected</NavLink>
         <NavLink to="/customers">Customers</NavLink>
         <NavLink to="/sales">Sales</NavLink>
+        <NavLink to="/sales-list">Sales List</NavLink>
       </nav>
 
       <Routes>
@@ -39,6 +41,7 @@ const App = () => (
         <Route path="/customers" element={<Customers />} />
         <Route path="/sales" element={<SalesForm />} />
         <Route path="/" element={<Login />} />
+        <Route path="/sales-list" element={<SalesList />} />
       </Routes>
     </div>
   </Router>
