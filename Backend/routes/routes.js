@@ -6,6 +6,8 @@ import { updateUser } from "../controllers/updateUsers.js";
 import { deleteUser } from "../controllers/deleteUsers.js";
 import { displayHome } from "../controllers/displayHome.js";
 import { getCustomers } from "../controllers/getCustomers.js";
+import { createSale } from "../controllers/createSales.js";
+import { getSales } from "../controllers/getSales.js";
 
 const router = express.Router();
 
@@ -26,5 +28,7 @@ router.post("/users", verifyToken, createUser);
 router.put("/users/:id", verifyToken, updateUser);
 router.delete("/users/:id", verifyToken, deleteUser);
 router.get("/customers", verifyToken, getCustomers);
+router.post("/sales", verifyToken, createSale);
+router.get("/sales", verifyToken, getSales);
 
 export default router;
