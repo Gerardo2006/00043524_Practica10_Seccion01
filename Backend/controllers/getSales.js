@@ -1,7 +1,7 @@
 import { pool } from "../data/conection.js";
 
 export const getSales = (request, response) => {
-  pool.query('SELECT * FROM sales', (error, results) => {
+  pool.query('SELECT s.id, s.amount, s.created_at, c.name FROM sales AS s JOIN customers AS c ON s.id_customer = c.id', (error, results) => {
     if (error) {
         throw error;
     }
