@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(90deg, #0a5ca3, #eeeeee);
+}
+
+/* Asegura que el contenedor raíz ocupe toda la pantalla */
+#root {
+  height: 100%;
+}
+
+/* Contenedor principal centrado */
+.login-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+/* Caja del formulario */
+.login-form {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,253,255,0.9));
+  padding: 36px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(15, 33, 64, 0.08);
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(43,155,209,0.08);
+  overflow: hidden;
+}
+
+/* barra de color superior */
+.login-form::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #2b9bd1, #7bd389);
+}
+
+/* Inputs */
+.login-form input {
+  padding: 12px;
+  border: 1px solid #d6e6ef;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fbfeff;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #2b9bd1;
+  box-shadow: 0 4px 12px rgba(43,155,209,0.12);
+}
+
+/* label styling optional if labels exist */
+.login-form label {
+  font-size: 14px;
+  color: #2f3b45;
+}
+
+/* Botón */
+.login-form button {
+  padding: 12px;
+  background: linear-gradient(90deg, #2b9bd1, #1f8f8a);
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  box-shadow: 0 6px 18px rgba(43,155,209,0.18);
+}
+
+.login-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(43,155,209,0.22);
+}
+
+/* small helper text */
+.login-help {
+  font-size: 14px;
+  color: #52606d;
+  text-align: center;
+}
+
+/* Mensaje de error */
+.error {
+  color: #c00;
+  font-size: 0.9rem;
+  text-align: center;
+}
