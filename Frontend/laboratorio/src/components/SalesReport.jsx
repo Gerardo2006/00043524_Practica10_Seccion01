@@ -82,14 +82,6 @@ const SalesReport = () => {
               </tfoot>
             </table>
           </div>
-
-          <div className="summary-box">
-            <span className="summary-label">Total de clientes:</span>
-            <span className="summary-value">{reportData.length}</span>
-            <span className="summary-separator">|</span>
-            <span className="summary-label">Monto total:</span>
-            <span className="summary-value highlight">{formatCurrency(totalGeneral)}</span>
-          </div>
         </>
       )}
     </div>

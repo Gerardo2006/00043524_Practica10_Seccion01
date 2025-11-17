@@ -73,7 +73,6 @@ const SalesList = () => {
                                 <th>ID</th>
                                 <th>Fecha</th>
                                 <th>Cliente</th>
-                                <th>Código Cliente</th>
                                 <th>Monto</th>
                             </tr>
                         </thead>
@@ -85,12 +84,8 @@ const SalesList = () => {
                                     <td className="customer-name">
                                         <div className="customer-info">
                                             <span className="name">{sale.customer_name}</span>
-                                            {sale.customer_phone && (
-                                                <span className="phone"> {sale.customer_phone}</span>
-                                            )}
                                         </div>
                                     </td>
-                                    <td className="customer-code">{sale.customer_code}</td>
                                     <td className="sale-amount">{formatAmount(sale.amount)}</td>
                                 </tr>
                             ))}

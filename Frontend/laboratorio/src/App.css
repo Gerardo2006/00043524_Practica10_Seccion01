@@ -1,72 +1,48 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
+  /* Ancho y centrado básicos */
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
 }
 
 .main-nav {
-  background: linear-gradient(90deg, #2b9bd1, #1f8f8a);
-  padding: 16px 24px;
-  display: flex;
-  gap: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  /* Fondo simple, sin gradientes ni sombras */
+  background-color: #333;
+  padding: 10px;
+  /* El diseño de navegación básico con saltos de línea para un aspecto menos 'flex' */
+  border: 1px solid black;
+  margin-bottom: 20px;
 }
 
 .main-nav a {
+  /* Estilo de enlace muy simple */
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: inline-block; /* Para que 'padding' funcione, pero sin flexbox */
 }
 
 .main-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-bottom-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
+  /* Cambio de color de fondo básico al pasar el ratón */
+  background-color: #555;
+  color: yellow;
+  /* Sin transiciones complejas */
 }
 
+/* Eliminando estilos de logo y animaciones */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  height: 4em;
+  padding: 1em;
 }
 
 .card {
-  padding: 2em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #666;
 }

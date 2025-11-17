@@ -1,211 +1,153 @@
 .sales-report-container {
-  padding: 20px;
-  max-width: 1000px;
+  padding: 10px;
+  width: 90%;
   margin: 0 auto;
 }
 
 .sales-report-container h1 {
-  color: #2b9bd1;
-  margin-bottom: 32px;
-  font-size: 2rem;
+  color: darkred;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
   text-align: center;
+  border-bottom: 1px solid darkred;
+  padding-bottom: 5px;
 }
 
 .loading {
   text-align: center;
-  padding: 60px;
+  padding: 40px;
   font-size: 1.2rem;
-  color: #52606d;
+  color: darkblue;
 }
 
 .error-message {
-  background-color: #fee;
-  color: #c00;
-  padding: 20px;
-  border-radius: 12px;
+  background-color: red;
+  color: white;
+  padding: 15px;
+  border: 1px solid black;
+  margin: 10px;
   text-align: center;
-  border: 1px solid #fcc;
-  margin: 20px;
 }
 
 .no-data {
   text-align: center;
-  padding: 60px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  color: #52606d;
-  font-size: 1.1rem;
+  padding: 30px;
+  background-color: #eee;
+  border: 1px dashed gray;
+  color: gray;
+  font-size: 1rem;
 }
 
-/* Tabla */
+/* Tabla simple */
 .table-wrapper {
   overflow-x: auto;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin-bottom: 24px;
+  border: 1px solid black;
+  margin-bottom: 15px;
 }
 
 .report-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .report-table thead {
-  background: linear-gradient(90deg, #2b9bd1, #1f8f8a);
+  background-color: #333; /* Color sólido */
   color: white;
 }
 
 .report-table th {
-  padding: 18px 16px;
+  padding: 10px;
   text-align: left;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  font-size: 0.85rem;
 }
 
+/* Alineación simple y consistente */
 .report-table th:last-child {
-  text-align: right;
+  text-align: left;
 }
 
 .report-table tbody tr {
-  border-bottom: 1px solid #e9ecef;
-  transition: all 0.2s ease;
+  border-bottom: 1px solid #ddd;
+  /* Sin transiciones */
 }
 
 .report-table tbody tr:hover {
-  background-color: #f8fcff;
-}
-
-.report-table tbody tr:last-child {
-  border-bottom: none;
+  background-color: #f0f0f0;
 }
 
 .report-table td {
-  padding: 16px;
-  color: #2f3b45;
+  padding: 10px;
+  color: black;
 }
 
 .customer-name {
-  font-weight: 600;
-  color: #2f3b45;
-  font-size: 1.05rem;
+  font-weight: bold;
+  color: darkslategray;
+  font-size: 1rem;
 }
 
 .total-sales {
-  text-align: right;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #7bd389;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: green;
 }
 
-/* Footer de totales */
+/* Pie de página de totales simple */
 .report-table tfoot {
-  background: #f8fcff;
-  border-top: 3px solid #2b9bd1;
+  background-color: #ddd;
+  border-top: 2px solid black;
 }
 
 .report-table tfoot td {
-  padding: 20px 16px;
-  font-size: 1.1rem;
-  color: #2b9bd1;
+  padding: 12px 10px;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
 }
 
 .total-row td:last-child {
-  text-align: right;
-  font-size: 1.3rem;
-  color: #7bd389;
+  text-align: left;
+  font-size: 1.2rem;
+  color: darkgreen;
 }
 
-/* Caja de resumen */
+/* Caja de resumen simple, usando bloques */
 .summary-box {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  background-color: white;
+  padding: 15px;
+  border: 1px solid gray;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .summary-label {
-  font-size: 0.95rem;
-  color: #52606d;
-  font-weight: 500;
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: normal;
+  display: block; /* Para que cada etiqueta esté en su propia línea */
+  margin-top: 5px;
 }
 
 .summary-value {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #2b9bd1;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: navy;
+  display: block;
 }
 
 .summary-value.highlight {
-  color: #7bd389;
-  font-size: 1.4rem;
-}
-
-.summary-separator {
-  color: #d6e6ef;
+  color: darkgreen;
   font-size: 1.2rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .sales-report-container {
-    padding: 12px;
-  }
-
-  .sales-report-container h1 {
-    font-size: 1.6rem;
-    margin-bottom: 24px;
-  }
-
-  .report-table {
-    font-size: 0.9rem;
-  }
-
-  .report-table th,
-  .report-table td {
-    padding: 12px 10px;
-  }
-
-  .customer-name {
-    font-size: 1rem;
-  }
-
-  .total-sales {
-    font-size: 1.1rem;
-  }
-
-  .summary-box {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  .summary-separator {
-    display: none;
-  }
+.summary-separator {
+  /* Se elimina el separador visualmente complejo */
+  display: none;
 }
 
-/* Animación de entrada */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.report-table tbody tr {
-  animation: fadeIn 0.3s ease;
-}
+/* Eliminando la animación de entrada y las consultas de medios */

@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset básico, se conserva */
 * {
   margin: 0;
   padding: 0;
@@ -7,117 +7,99 @@
 
 html, body {
   height: 100%;
-  font-family: "Inter", Arial, sans-serif;
-  background: linear-gradient(90deg, #0a5ca3, #eeeeee);
+  font-family: sans-serif; /* Fuente genérica */
+  background-color: #f0f0f0; /* Color de fondo simple */
 }
 
-/* Asegura que el contenedor raíz ocupe toda la pantalla */
 #root {
   height: 100%;
 }
 
-/* Contenedor principal centrado */
+/* Contenedor principal centrado simplificado */
 .login-container {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 32px;
-}
-
-/* Caja del formulario */
-.login-form {
-  position: relative;
-  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,253,255,0.9));
-  padding: 36px;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(15, 33, 64, 0.08);
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(43,155,209,0.08);
-  overflow: hidden;
-}
-
-/* barra de color superior */
-.login-form::before {
-  content: "";
+  /* Centrado clásico sin flexbox avanzado */
   position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 6px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  background: linear-gradient(90deg, #2b9bd1, #7bd389);
+  padding: 10px;
 }
 
-/* Inputs */
+/* Caja del formulario simplificada */
+.login-form {
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black; /* Borde simple y fuerte */
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto; /* Centrar el bloque */
+  
+  /* Se eliminan sombras, gradientes y backdrop-filter */
+}
+
+/* Eliminar la barra de color superior compleja */
+.login-form::before {
+  content: none;
+}
+
+/* Inputs simplificados */
 .login-form input {
-  padding: 12px;
-  border: 1px solid #d6e6ef;
-  border-radius: 8px;
-  font-size: 16px;
-  background: #ffffff;
-  color: #2f3b45;
-  transition: border-color 180ms ease, box-shadow 180ms ease;
+  padding: 8px;
+  border: 1px solid #666;
+  font-size: 14px;
+  background-color: #eee;
+  color: black;
+  width: 100%;
+  margin-bottom: 10px; /* Espaciado con margen simple */
 }
 
 .login-form input::placeholder {
-  color: #8b98a3;
+  color: #999;
 }
 
 .login-form input:focus {
-  outline: none;
-  border-color: #2b9bd1;
-  box-shadow: 0 4px 12px rgba(43,155,209,0.12);
+  outline: 2px solid darkblue;
+  border-color: darkblue;
+  /* Sin sombras o transiciones */
 }
 
-/* label styling optional if labels exist */
-.login-form label {
-  font-size: 14px;
-  color: #2f3b45;
-}
-
-/* Botón */
+/* Botón simplificado */
 .login-form button {
-  padding: 12px 24px;
-  background: linear-gradient(90deg, #2b9bd1, #1f8f8a);
-  color: #fff;
+  padding: 10px;
+  background-color: blue; /* Un solo color simple */
+  color: white;
   font-size: 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
+  font-weight: bold;
+  border: 1px solid black;
   cursor: pointer;
-  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
-  box-shadow: 0 6px 18px rgba(43,155,209,0.18);
+  width: 100%;
+  
+  /* Se eliminan gradientes, sombras y efectos hover/active */
 }
 
 .login-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(43,155,209,0.22);
-  background: linear-gradient(90deg, #238ab5, #1a7d78);
+  background-color: darkblue;
 }
 
 .login-form button:active {
-  transform: translateY(0px);
+  background-color: darkred;
 }
 
-/* small helper text */
+/* Texto de ayuda simple */
 .login-help {
-  font-size: 14px;
-  color: #52606d;
+  font-size: 12px;
+  color: gray;
   text-align: center;
+  margin-top: 10px;
 }
 
-/* Mensaje de error */
+/* Mensaje de error simple */
 .error {
-  color: #c00;
-  font-size: 0.9rem;
+  color: red;
+  font-size: 0.8rem;
   text-align: center;
+  border: 1px solid red;
+  padding: 5px;
+  margin-top: 5px;
 }
