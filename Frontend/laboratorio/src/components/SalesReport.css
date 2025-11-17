@@ -1,0 +1,211 @@
+.sales-report-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sales-report-container h1 {
+  color: #2b9bd1;
+  margin-bottom: 32px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 1.2rem;
+  color: #52606d;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c00;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #fcc;
+  margin: 20px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 60px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #52606d;
+  font-size: 1.1rem;
+}
+
+/* Tabla */
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.report-table thead {
+  background: linear-gradient(90deg, #2b9bd1, #1f8f8a);
+  color: white;
+}
+
+.report-table th {
+  padding: 18px 16px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.report-table th:last-child {
+  text-align: right;
+}
+
+.report-table tbody tr {
+  border-bottom: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.report-table tbody tr:hover {
+  background-color: #f8fcff;
+}
+
+.report-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.report-table td {
+  padding: 16px;
+  color: #2f3b45;
+}
+
+.customer-name {
+  font-weight: 600;
+  color: #2f3b45;
+  font-size: 1.05rem;
+}
+
+.total-sales {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #7bd389;
+}
+
+/* Footer de totales */
+.report-table tfoot {
+  background: #f8fcff;
+  border-top: 3px solid #2b9bd1;
+}
+
+.report-table tfoot td {
+  padding: 20px 16px;
+  font-size: 1.1rem;
+  color: #2b9bd1;
+}
+
+.total-row td:last-child {
+  text-align: right;
+  font-size: 1.3rem;
+  color: #7bd389;
+}
+
+/* Caja de resumen */
+.summary-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.summary-label {
+  font-size: 0.95rem;
+  color: #52606d;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2b9bd1;
+}
+
+.summary-value.highlight {
+  color: #7bd389;
+  font-size: 1.4rem;
+}
+
+.summary-separator {
+  color: #d6e6ef;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sales-report-container {
+    padding: 12px;
+  }
+
+  .sales-report-container h1 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .report-table {
+    font-size: 0.9rem;
+  }
+
+  .report-table th,
+  .report-table td {
+    padding: 12px 10px;
+  }
+
+  .customer-name {
+    font-size: 1rem;
+  }
+
+  .total-sales {
+    font-size: 1.1rem;
+  }
+
+  .summary-box {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .summary-separator {
+    display: none;
+  }
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.report-table tbody tr {
+  animation: fadeIn 0.3s ease;
+}

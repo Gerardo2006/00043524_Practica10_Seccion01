@@ -86,7 +86,7 @@ const SalesList = () => {
                                         <div className="customer-info">
                                             <span className="name">{sale.customer_name}</span>
                                             {sale.customer_phone && (
-                                                <span className="phone">📞 {sale.customer_phone}</span>
+                                                <span className="phone"> {sale.customer_phone}</span>
                                             )}
                                         </div>
                                     </td>

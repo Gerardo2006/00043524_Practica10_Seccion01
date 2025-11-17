@@ -71,8 +71,6 @@ const Customers = () => {
   return (
     <div className="customers-container">
       <h1>Lista de Clientes</h1>
-
-      {/* Barra de búsqueda simple */}
       <div className="search-section">
         <form onSubmit={handleSearch} className="search-form">
           <input
@@ -88,7 +86,7 @@ const Customers = () => {
             className="search-btn"
             disabled={searching}
           >
-            {searching ? "Buscando..." : "🔍 Buscar"}
+            {searching ? "Buscando..." : "Buscar"}
           </button>
 
           {searchCode && (
@@ -97,7 +95,6 @@ const Customers = () => {
               onClick={handleClearSearch}
               className="clear-btn"
             >
-              ✕ Limpiar
             </button>
           )}
         </form>
