@@ -1,3 +1,4 @@
+/* Contenedor principal de la vista de clientes */
 .customers-container {
   padding: 10px;
   width: 95%;
@@ -5,13 +6,14 @@
   text-align: center;
 }
 
+/* Estilos para el titulo principal (H1) */
 .customers-container h1 {
-  color: #0056b3; /* Azul simple */
+  color: #0056b3;
   margin-bottom: 15px;
   font-size: 1.5rem;
 }
 
-/* Sección de búsqueda simplificada */
+/* Seccion que agrupa el formulario de busqueda */
 .search-section {
   background: #f0f0f0;
   padding: 15px;
@@ -19,23 +21,23 @@
   margin-bottom: 15px;
 }
 
+/* Campo de entrada de texto para la busqueda por codigo */
 .search-input {
-  /* Estilo de entrada muy básico */
-  width: 80%; /* Ancho fijo simple */
+  width: 80%;
   padding: 8px;
   border: 1px solid #666;
   font-size: 1rem;
-  margin-right: 10px; /* Espaciado con margen simple */
+  margin-right: 10px;
 }
 
+/* Estilo de foco para el campo de busqueda (resaltado verde) */
 .search-input:focus {
   outline: 2px solid green;
   border-color: black;
-  /* Sin box-shadow complejo o transiciones */
 }
 
+/* Estilos base para los botones de buscar y limpiar */
 .search-btn, .clear-btn {
-  /* Botones cuadrados y sin efectos */
   padding: 8px 15px;
   border: 1px solid black;
   font-size: 0.9rem;
@@ -44,26 +46,30 @@
   background-color: #ddd;
 }
 
+/* Estilo especifico para el boton de 'Buscar' */
 .search-btn {
-  background-color: #4CAF50; /* Verde básico */
+  background-color: #4CAF50;
   color: white;
 }
 
+/* Efecto al pasar el raton sobre el boton de 'Buscar' */
 .search-btn:hover:not(:disabled) {
-  background-color: #3e8e41; /* Verde más oscuro al pasar el ratón */
-  transform: none; /* Sin transformaciones */
+  background-color: #3e8e41;
 }
 
+/* Estilo especifico para el boton de 'Limpiar' */
 .clear-btn {
-  background-color: #f44336; /* Rojo básico */
+  background-color: #f44336;
   color: white;
 }
 
+/* Efecto al pasar el raton sobre el boton de 'Limpiar' */
 .clear-btn:hover {
-  background-color: #d32f2f; /* Rojo más oscuro al pasar el ratón */
+  background-color: #d32f2f;
   color: white;
 }
 
+/* Mensaje que muestra el numero de clientes encontrados despues de una busqueda */
 .search-info {
   margin-top: 10px;
   padding: 8px;
@@ -73,12 +79,14 @@
   text-align: left;
 }
 
+/* Mensaje de carga mientras se obtienen los datos */
 .loading {
   text-align: center;
   padding: 20px;
   color: blue;
 }
 
+/* Mensaje de error (fondo rojo) */
 .error-message {
   background-color: red;
   color: white;
@@ -86,9 +94,9 @@
   border: 1px solid black;
   margin-bottom: 10px;
   text-align: center;
-  /* Eliminar la animación de 'shake' */
 }
 
+/* Mensaje para cuando no hay clientes registrados */
 .no-data {
   text-align: center;
   padding: 20px;
@@ -97,6 +105,7 @@
   border: 1px dashed gray;
 }
 
+/* Contenedor que permite el scroll horizontal en caso de desbordamiento de la tabla */
 .table-wrapper {
   overflow-x: auto;
   background: white;
@@ -104,58 +113,53 @@
   margin-bottom: 10px;
 }
 
+/* Estilos generales de la tabla de clientes */
 .customers-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
 }
 
+/* Estilos del encabezado de la tabla (fila de titulos) */
 .customers-table thead {
-  background-color: navy; /* Color sólido básico */
+  background-color: navy;
   color: white;
   border-bottom: 2px solid black;
 }
 
+/* Estilos de las celdas de encabezado */
 .customers-table th {
   padding: 10px;
   text-align: left;
   font-weight: bold;
 }
 
+/* Estilos de las filas en el cuerpo de la tabla */
 .customers-table tbody tr {
   border-bottom: 1px solid #ccc;
-  /* Se elimina la transición de la fila */
 }
 
+/* Efecto al pasar el raton sobre las filas */
 .customers-table tbody tr:hover {
-  background-color: #e0e0e0; /* Cambio de color simple al pasar el ratón */
+  background-color: #e0e0e0;
 }
 
+/* Estilos generales de las celdas de datos */
 .customers-table td {
   padding: 10px;
   color: black;
 }
 
+/* Estilo para la primera columna de datos (ID) */
 .customers-table td:first-child {
   font-weight: bold;
   color: darkblue;
 }
 
+/* Estilo especifico para la celda que contiene el codigo de cliente */
 .customer-code {
   font-family: monospace;
   background-color: #eee;
   padding: 2px 5px;
   color: darkgreen;
 }
-
-.total-count {
-  text-align: right;
-  padding: 10px;
-  background: lightgray;
-  font-weight: bold;
-  color: darkred;
-  border: 1px solid black;
-  margin-top: 10px;
-}
-
-/* Eliminar la consulta de medios para simplificar */

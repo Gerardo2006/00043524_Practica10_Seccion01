@@ -136,14 +136,6 @@ const Customers = () => {
               </tbody>
             </table>
           </div>
-          
-          <div className="total-count">
-            {searchResults !== null ? (
-              <>Resultados de búsqueda: {searchResults.length} cliente{searchResults.length !== 1 ? 's' : ''}</>
-            ) : (
-              <>Total de clientes: {customers.length}</>
-            )}
-          </div>
         </>
       )}
     </div>

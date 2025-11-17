@@ -1,9 +1,11 @@
+/* Contenedor principal del reporte */
 .sales-report-container {
   padding: 10px;
   width: 90%;
   margin: 0 auto;
 }
 
+/* Encabezado del reporte */
 .sales-report-container h1 {
   color: darkred;
   margin-bottom: 20px;
@@ -13,6 +15,7 @@
   padding-bottom: 5px;
 }
 
+/* Estilos para el mensaje de carga */
 .loading {
   text-align: center;
   padding: 40px;
@@ -20,6 +23,7 @@
   color: darkblue;
 }
 
+/* Estilos para el mensaje de error */
 .error-message {
   background-color: red;
   color: white;
@@ -29,6 +33,7 @@
   text-align: center;
 }
 
+/* Estilos cuando no hay datos para mostrar */
 .no-data {
   text-align: center;
   padding: 30px;
@@ -38,7 +43,7 @@
   font-size: 1rem;
 }
 
-/* Tabla simple */
+/* Contenedor de la tabla con scroll horizontal (simple) */
 .table-wrapper {
   overflow-x: auto;
   background: white;
@@ -46,17 +51,21 @@
   margin-bottom: 15px;
 }
 
+/* Estilos generales de la tabla */
 .report-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
 }
 
+/* Estilos del encabezado de la tabla (thead) */
 .report-table thead {
-  background-color: #333; /* Color sólido */
+  background-color: #333;
+  /* Color sólido */
   color: white;
 }
 
+/* Estilos de las celdas de encabezado */
 .report-table th {
   padding: 10px;
   text-align: left;
@@ -65,31 +74,35 @@
   font-size: 0.85rem;
 }
 
-/* Alineación simple y consistente */
+/* Ajuste de alineación para la última columna de encabezado */
 .report-table th:last-child {
   text-align: left;
 }
 
+/* Estilos de las filas en el cuerpo de la tabla */
 .report-table tbody tr {
   border-bottom: 1px solid #ddd;
-  /* Sin transiciones */
 }
 
+/* Efecto hover al pasar el ratón sobre las filas */
 .report-table tbody tr:hover {
   background-color: #f0f0f0;
 }
 
+/* Estilos de las celdas de datos */
 .report-table td {
   padding: 10px;
   color: black;
 }
 
+/* Estilo específico para el nombre del cliente */
 .customer-name {
   font-weight: bold;
   color: darkslategray;
   font-size: 1rem;
 }
 
+/* Estilo específico para la columna de ventas totales */
 .total-sales {
   text-align: left;
   font-weight: bold;
@@ -97,12 +110,13 @@
   color: green;
 }
 
-/* Pie de página de totales simple */
+/* Estilos del pie de tabla (tfoot) */
 .report-table tfoot {
   background-color: #ddd;
   border-top: 2px solid black;
 }
 
+/* Estilos de las celdas en el pie de tabla */
 .report-table tfoot td {
   padding: 12px 10px;
   font-size: 1rem;
@@ -110,44 +124,9 @@
   font-weight: bold;
 }
 
+/* Estilo para la última celda en la fila de totales (Total General) */
 .total-row td:last-child {
   text-align: left;
   font-size: 1.2rem;
   color: darkgreen;
 }
-
-/* Caja de resumen simple, usando bloques */
-.summary-box {
-  background-color: white;
-  padding: 15px;
-  border: 1px solid gray;
-  margin-top: 15px;
-  text-align: center;
-}
-
-.summary-label {
-  font-size: 0.9rem;
-  color: gray;
-  font-weight: normal;
-  display: block; /* Para que cada etiqueta esté en su propia línea */
-  margin-top: 5px;
-}
-
-.summary-value {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: navy;
-  display: block;
-}
-
-.summary-value.highlight {
-  color: darkgreen;
-  font-size: 1.2rem;
-}
-
-.summary-separator {
-  /* Se elimina el separador visualmente complejo */
-  display: none;
-}
-
-/* Eliminando la animación de entrada y las consultas de medios */

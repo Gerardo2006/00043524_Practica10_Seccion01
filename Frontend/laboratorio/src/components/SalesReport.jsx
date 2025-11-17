@@ -74,12 +74,6 @@ const SalesReport = () => {
                   </tr>
                 ))}
               </tbody>
-              <tfoot>
-                <tr className="total-row">
-                  <td><strong>TOTAL GENERAL</strong></td>
-                  <td><strong>{formatCurrency(totalGeneral)}</strong></td>
-                </tr>
-              </tfoot>
             </table>
           </div>
         </>

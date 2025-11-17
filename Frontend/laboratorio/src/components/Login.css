@@ -7,8 +7,8 @@
 
 html, body {
   height: 100%;
-  font-family: sans-serif; /* Fuente genérica */
-  background-color: #f0f0f0; /* Color de fondo simple */
+  font-family: sans-serif;
+  background-color: #f0f0f0;
 }
 
 #root {
@@ -17,7 +17,6 @@ html, body {
 
 /* Contenedor principal centrado simplificado */
 .login-container {
-  /* Centrado clásico sin flexbox avanzado */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -30,12 +29,10 @@ html, body {
 .login-form {
   background-color: white;
   padding: 20px;
-  border: 2px solid black; /* Borde simple y fuerte */
+  border: 2px solid black;
   width: 100%;
   max-width: 350px;
-  margin: 0 auto; /* Centrar el bloque */
-  
-  /* Se eliminan sombras, gradientes y backdrop-filter */
+  margin: 0 auto;
 }
 
 /* Eliminar la barra de color superior compleja */
@@ -51,7 +48,7 @@ html, body {
   background-color: #eee;
   color: black;
   width: 100%;
-  margin-bottom: 10px; /* Espaciado con margen simple */
+  margin-bottom: 10px;
 }
 
 .login-form input::placeholder {
@@ -61,21 +58,18 @@ html, body {
 .login-form input:focus {
   outline: 2px solid darkblue;
   border-color: darkblue;
-  /* Sin sombras o transiciones */
 }
 
 /* Botón simplificado */
 .login-form button {
   padding: 10px;
-  background-color: blue; /* Un solo color simple */
+  background-color: blue;
   color: white;
   font-size: 16px;
   font-weight: bold;
   border: 1px solid black;
   cursor: pointer;
   width: 100%;
-  
-  /* Se eliminan gradientes, sombras y efectos hover/active */
 }
 
 .login-form button:hover {

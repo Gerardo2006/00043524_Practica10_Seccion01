@@ -16,7 +16,6 @@
 }
 
 .stats-card {
-  /* Usando diseño simple de bloque en lugar de flexbox */
   margin-bottom: 15px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -26,9 +25,8 @@
 .stat-item {
   background-color: #f8f8f8;
   padding: 10px;
-  border-top: 3px solid navy; /* Borde simple */
-  margin-bottom: 10px; /* Espaciado entre elementos de estadística */
-  /* Eliminando sombras y alineaciones complejas */
+  border-top: 3px solid navy;
+  margin-bottom: 10px;
 }
 
 .stat-label {
@@ -45,7 +43,7 @@
 }
 
 .stat-value.total-amount {
-  color: darkgreen; /* Verde simple */
+  color: darkgreen;
 }
 
 .loading {
@@ -92,7 +90,7 @@
 }
 
 .sales-table thead {
-  background-color: darkgray; /* Color sólido simple */
+  background-color: darkgray;
   color: black;
 }
 
@@ -106,7 +104,6 @@
 
 .sales-table tbody tr {
   border-bottom: 1px solid #ccc;
-  /* Eliminando transiciones y sombras */
 }
 
 .sales-table tbody tr:hover {
@@ -148,7 +145,5 @@
   font-weight: bold;
   font-size: 1.1rem;
   color: darkgreen;
-  text-align: left; /* Alineación simple, eliminando 'right' */
+  text-align: left;
 }
-
-/* Eliminando la animación de entrada y las consultas de medios */
