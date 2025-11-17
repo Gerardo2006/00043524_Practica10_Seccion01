@@ -5,9 +5,9 @@ import { createUser } from "../controllers/createUsers.js";
 import { updateUser } from "../controllers/updateUsers.js";
 import { deleteUser } from "../controllers/deleteUsers.js";
 import { displayHome } from "../controllers/displayHome.js";
-import { getCustomers, getCustomerByCode } from "../controllers/getCustomers.js";
+import { getCustomers, searchCustomerByCode } from "../controllers/getCustomers.js";
 import { createSale } from "../controllers/createSales.js";
-import { getSales } from "../controllers/getSales.js";
+import { getSales, getSalesReport } from "../controllers/getSales.js";
 
 const router = express.Router();
 
@@ -28,8 +28,9 @@ router.post("/users", verifyToken, createUser);
 router.put("/users/:id", verifyToken, updateUser);
 router.delete("/users/:id", verifyToken, deleteUser);
 router.get("/customers", verifyToken, getCustomers);
-router.get("/customers/:code", verifyToken, getCustomerByCode);
+router.get("/customers/:code", verifyToken, searchCustomerByCode);
 router.post("/sales", verifyToken, createSale);
 router.get("/sales", verifyToken, getSales);
+router.get("/sales/report", verifyToken, getSalesReport);
 
 export default router;
